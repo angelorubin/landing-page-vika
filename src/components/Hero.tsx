@@ -3,6 +3,7 @@
 import { Box, Button, Container, Typography, IconButton } from "@mui/material";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import { poppins, montserrat } from "@/fonts/fonts";
+import theme from "@/lib/theme";
 
 export default function Hero() {
   return (
@@ -10,40 +11,40 @@ export default function Hero() {
       sx={{
         display: "flex",
         flexDirection: { xs: "column", md: "row" },
-        alignItems: "stretch",
-        minHeight: "300px",
-        mt: "0.5rem",
-        ml: "1rem",
-        mr: "1rem",
+        alignItems: "center",
+        minHeight: { xs: "auto", md: "80vh" }, // 'auto' no mobile para não esticar o fundo preto
+        mt: 1,
+        ml: 1,
+        mr: 1,
         backgroundColor: "#000",
         borderRadius: "2rem",
+        gap: { xs: 4, md: 0 }, // Espaço entre o texto e o botão de WhatsApp no mobile
+        pb: { xs: 4, md: 0 }  // Padding inferior no mobile para o ícone não colar na borda
       }}
     >
       <Container
         sx={{
           display: "flex",
-          flex: { xs: 1, md: 2, sm: 2 },
+          flex: { xs: "none", md: 2 },
           flexDirection: "column",
           justifyContent: "center",
-          alignItems: "center",
-          height: "80vh",
+          alignItems: { xs: "center", md: "flex-start" }, // Centraliza tudo no mobile
+          height: { xs: "auto", md: "80vh" }, // Altura automática no mobile
+          pt: { xs: 6, md: 0 }, // Espaço no topo no mobile
           p: 4
         }}
       >
         <Box sx={{
           display: "flex",
           flexDirection: "column",
-          width: "55%"
+          width: { xs: "100%", md: "70%", lg: "55%" }, // Ajuste responsivo da largura
+          textAlign: { xs: "center", md: "left" }, // Texto centralizado no mobile
+          alignItems: { xs: "center", md: "flex-start" }
         }}>
           {/* TÍTULO */}
           <Typography
             sx={{
-              fontSize: {
-                xs: "1.4rem",
-                sm: "2rem",
-                md: "1.8rem",
-                lg: "2rem",
-              },
+              fontSize: { xs: "1.5rem", sm: "2rem", md: "2rem" },
               lineHeight: 1.2,
               mb: 3,
               fontFamily: montserrat.style.fontFamily,
@@ -54,37 +55,25 @@ export default function Hero() {
             Eleve a experiência do seu ambiente{" "}
             <Box component="span"
               sx={{
-                color: "#05b6c6ff",
-                fontFamily: poppins.style.fontFamily,
+                color: "#4995B1",
+                fontFamily: montserrat.style.fontFamily,
                 fontWeight: 700,
-                fontSize: "2rem",
+                fontSize: "inherit", // Herda o tamanho do pai para não quebrar no mobile
                 display: "inline",
               }}>
               com uma consultoria olfativa
             </Box>
-
-            <Box
-              component="span"
-              sx={{
-                color: "#ffffff",
-                fontFamily: montserrat.style.fontFamily,
-                fontWeight: 100,
-                display: "inline",
-                mx: 0.5
-              }}
-            >
+            {" "}
+            <Box component="span" sx={{ fontWeight: 100, display: "inline" }}>
               desenvolvida para marcas que
             </Box>
-
-            <Box
-              component="span"
+            {" "}
+            <Box component="span"
               sx={{
-                color: "#ffffff",
                 fontFamily: poppins.style.fontFamily,
                 fontWeight: 800,
                 display: "inline",
-              }}
-            >
+              }}>
               desejam transmitir sofisticação.
             </Box>
           </Typography>
@@ -92,11 +81,12 @@ export default function Hero() {
           {/* SUBTEXTO */}
           <Typography
             sx={{
-              fontSize: { xs: "1rem", md: "0.9rem" },
+              fontSize: { xs: "0.95rem", md: "0.9rem" },
               mb: 4,
               color: "#fff",
               fontFamily: montserrat.style.fontFamily,
               fontWeight: 200,
+              maxWidth: { xs: "100%", md: "90%" }
             }}
           >
             Criamos fragrâncias exclusivas e oferecemos uma curadoria olfativa completa - da
@@ -107,27 +97,20 @@ export default function Hero() {
           {/* BOTÃO */}
           <Button
             variant="contained"
-            size="small"
             sx={{
-              // 1. Usamos 'background' com transição suave (sem porcentagens)
               background: "linear-gradient(to right, #05b6c6ff, #0E2A38)",
-
-              // 2. Importante: Resetar a cor de fundo padrão que o MUI injeta no variant contained
               backgroundColor: "transparent",
-
               color: "#fff",
               px: 4,
               py: 1.5,
               borderRadius: "8px",
               textTransform: "none",
-              width: "300px",
+              width: { xs: "100%", sm: "300px" }, // Botão ocupa largura total em telas muito pequenas
               fontWeight: 600,
-              boxShadow: "none", // Remove a sombra para um visual mais limpo
+              boxShadow: "none",
               "&:hover": {
-                // Repetimos o gradiente no hover para ele não sumir
-                background: "linear-gradient(to right, #05b6c6ff, #0E2A38)", // Versões um pouco mais claras no hover
+                background: "linear-gradient(to right, #05b6c6ff, #0E2A38)",
                 opacity: 0.9,
-                backgroundColor: "transparent",
               }
             }}
           >
@@ -136,53 +119,46 @@ export default function Hero() {
         </Box>
       </Container>
 
+      {/* BOX WHATSAPP */}
       <Box
         sx={{
           display: "flex",
-          flex: { xs: 1, md: 1, sm: 1 },
-          height: "100%",
-          minHeight: "80vh", // Garante que o container ocupe a tela toda
+          flex: { xs: "none", md: 1 },
+          height: { xs: "auto", md: "100%" },
           width: "100%",
-          // 1. Alinha o Box interno no fundo e na direita
           alignItems: "flex-end",
-          justifyContent: "flex-end",
-          p: 4, // Espaçamento para não encostar na borda da tela
+          justifyContent: { xs: "center", md: "flex-end" }, // Centralizado no mobile
+          p: 4,
         }}
       >
         <Box
           sx={{
             display: "flex",
-            alignItems: "center", // Mantém ícone e texto centralizados entre si
+            alignItems: "center",
             gap: 2,
             transition: "transform 0.2s ease",
             "&:hover": { transform: "scale(1.05)" },
             cursor: "pointer",
-            // 2. Removemos height 100% daqui para ele não esticar e centralizar o ícone
           }}
         >
-          {/* Círculo do WhatsApp */}
           <IconButton
             sx={{
-              backgroundColor: "#25D366", // Verde oficial
-              color: "#fff",               // Ícone branco
-              "&:hover": {
-                backgroundColor: "#048374ff", // Verde mais escuro no hover
-              },
+              backgroundColor: "#25D366",
+              color: "#fff",
+              "&:hover": { backgroundColor: "#048374ff" },
               width: 54,
               height: 54,
             }}
           >
             <WhatsAppIcon sx={{ fontSize: 32 }} />
           </IconButton>
-
-          {/* Texto */}
           <Typography
             sx={{
               fontSize: "14px",
               fontWeight: 500,
-              color: "#ffffffff",
+              color: "#fff",
               whiteSpace: "nowrap",
-              fontFamily: montserrat.style.fontFamily, // Seguindo o padrão do layout
+              fontFamily: montserrat.style.fontFamily,
             }}
           >
             Fale conosco no WhatsApp

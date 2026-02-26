@@ -38,7 +38,7 @@ export default function Header() {
     <>
       <AppBar
         position="fixed"
-        elevation={0}
+        elevation={1}
         sx={{
           backgroundColor: "#fff"
         }}
