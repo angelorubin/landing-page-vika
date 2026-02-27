@@ -17,6 +17,10 @@ import {
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useTheme } from "@mui/material/styles";
+<<<<<<< HEAD
+=======
+import { montserrat } from "@/fonts/fonts";
+>>>>>>> vika/main
 
 const navItems = [
   { label: "Sobre", href: "#sobre" },
@@ -38,7 +42,7 @@ export default function Header() {
     <>
       <AppBar
         position="fixed"
-        elevation={1}
+        elevation={0}
         sx={{
           backgroundColor: "#fff"
         }}
@@ -49,9 +53,9 @@ export default function Header() {
             {/* LOGO */}
             <Box
               component="img"
-              src="/logo.png" // substitua pela sua logo
+              src="/assets/images/logo.png" // substitua pela sua logo
               alt="Logo"
-              sx={{ height: 40 }}
+              sx={{ height: "5rem" }}
             />
 
             {/* MENU DESKTOP */}
@@ -121,7 +125,13 @@ export default function Header() {
                   href={item.href}
                   onClick={toggleDrawer}
                 >
-                  <ListItemText primary={item.label} />
+                  <ListItemText
+                    primary={item.label}
+                    sx={{
+                      fontFamily: montserrat.style.fontFamily,
+                      fontWeight: 200,
+                      fontSize: "10rem",
+                    }} />
                 </ListItemButton>
               </ListItem>
             ))}

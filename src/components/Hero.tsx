@@ -12,8 +12,8 @@ export default function Hero() {
         display: "flex",
         flexDirection: { xs: "column", md: "row" },
         alignItems: "center",
-        minHeight: { xs: "auto", md: "80vh" }, // 'auto' no mobile para não esticar o fundo preto
-        mt: 1,
+        minHeight: { xs: "auto", md: "80vh" },
+        mt: "2rem",
         ml: 1,
         mr: 1,
         backgroundColor: "#000",
@@ -103,10 +103,7 @@ export default function Hero() {
               color: "#fff",
               px: 4,
               py: 1.5,
-              borderRadius: "8px",
-              textTransform: "none",
-              width: { xs: "100%", sm: "300px" }, // Botão ocupa largura total em telas muito pequenas
-              fontWeight: 600,
+              width: { xs: "100%", sm: "300px" },
               boxShadow: "none",
               "&:hover": {
                 background: "linear-gradient(to right, #05b6c6ff, #0E2A38)",
@@ -114,22 +111,30 @@ export default function Hero() {
               }
             }}
           >
-            Agendar consultoria olfativa
+            <Typography
+              sx={{
+                fontSize: "1rem",
+                fontFamily: montserrat.style.fontFamily,
+                fontWeight: { xs: 300, md: 400 },
+                borderRadius: "8px",
+                textTransform: "none",
+              }}>Agendar consultoria olfativa</Typography>
           </Button>
         </Box>
-      </Container>
+      </Container >
 
       {/* BOX WHATSAPP */}
-      <Box
+      < Box
         sx={{
           display: "flex",
           flex: { xs: "none", md: 1 },
           height: { xs: "auto", md: "100%" },
           width: "100%",
           alignItems: "flex-end",
-          justifyContent: { xs: "center", md: "flex-end" }, // Centralizado no mobile
+          justifyContent: { xs: "center", sm: "center", md: "flex-end" }, // Centralizado no mobile
           p: 4,
-        }}
+        }
+        }
       >
         <Box
           sx={{
@@ -164,7 +169,7 @@ export default function Hero() {
             Fale conosco no WhatsApp
           </Typography>
         </Box>
-      </Box>
-    </Box>
+      </Box >
+    </Box >
   );
 }
