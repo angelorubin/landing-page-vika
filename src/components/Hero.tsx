@@ -25,18 +25,20 @@ export default function Hero() {
         sx={{
           display: "flex",
           flex: { xs: 1, sm: 2, md: 2 },
-          width: { xs: "100%", sm: "80%", md: "80%" },
-          flexDirection: { xs: "column", sm: "column", md: "column" },
+          width: { xs: "80%", sm: "80%", md: "80%" },
+          flexDirection: { xs: "column", sm: "row", md: "column" },
           justifyContent: { xs: "center", sm: "center", md: "center" },
           alignItems: { xs: "center", sm: "center", md: "center" },
-          border: "5px solid orange"
+          mt: "1rem",
+          gap: { xs: 6, sm: 2, md: 0 },
+          border: "1px solid red"
         }}>
         {/* TÍTULO */}
         <Box sx={{
           display: "flex",
           flex: 1,
           justifyContent: { xs: "center", sm: "center", md: "center" },
-          alignItems: { xs: "center", sm: "center", md: "center" },
+          alignItems: { xs: "center", sm: "center", md: "center" }
         }}>
           <Typography
             sx={{
@@ -45,8 +47,7 @@ export default function Hero() {
               fontFamily: montserrat.style.fontFamily,
               fontWeight: 100,
               color: "#ffffff",
-              textAlign: { xs: "center", sm: "left", md: "left" },
-              border: "3px solid blue"
+              textAlign: { xs: "center", sm: "center", md: "left" }
             }}
           >
             <Box component="span"
@@ -95,8 +96,7 @@ export default function Hero() {
         <Box sx={{
           display: "flex",
           flex: 1,
-          alignItems: "center",
-          border: "3px solid blue"
+          alignItems: "center"
         }}>
           <Typography
             sx={{
@@ -107,7 +107,7 @@ export default function Hero() {
               fontFamily: montserrat.style.fontFamily,
               fontWeight: 200,
               maxWidth: { xs: "100%", md: "90%" },
-              textAlign: { xs: "center", sm: "left", md: "left" }
+              textAlign: { xs: "center", sm: "center", md: "left" }
             }}
           >
             Criamos fragrâncias exclusivas e oferecemos uma curadoria olfativa completa - da
@@ -122,8 +122,7 @@ export default function Hero() {
           flex: 1,
           justifyContent: "center",
           alignItems: "center",
-          width: "100%",
-          border: "3px solid blue"
+          width: "100%"
         }}>
           <Button
             variant="contained"
@@ -133,7 +132,7 @@ export default function Hero() {
               color: "#fff",
               px: 4,
               py: 1.5,
-              width: { xs: "100%", sm: "300px" },
+              width: { xs: "70%", sm: "80%" },
               boxShadow: "none",
               "&:hover": {
                 background: "linear-gradient(to right, #05b6c6ff, #0E2A38)",
