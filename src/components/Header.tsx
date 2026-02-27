@@ -17,10 +17,7 @@ import {
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useTheme } from "@mui/material/styles";
-<<<<<<< HEAD
-=======
 import { montserrat } from "@/fonts/fonts";
->>>>>>> vika/main
 
 const navItems = [
   { label: "Sobre", href: "#sobre" },
