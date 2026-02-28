@@ -11,34 +11,40 @@ export default function Hero() {
         display: "flex",
         flexDirection: { xs: "column", sm: "column", md: "row" },
         alignItems: { xs: "center", sm: "center", md: "stretch" },
-        minHeight: "70vh",
-        mt: "2rem",
+        minHeight: "80vh",
+        mt: "1.6rem",
         ml: 1,
         mr: 1,
+        mb: 1,
+        p: "2rem",
         backgroundColor: "#000",
         borderRadius: "2rem",
-        gap: { xs: 4, md: 0 },
-        pb: { xs: 4, md: 0 }
+        gap: { xs: 4, md: 0 }
       }}
     >
-      <Box
-        sx={{
+      <Box sx={{
+        display: "flex",
+        flex: { xs: 1, sm: 2, md: 2 },
+        flexDirection: { xs: "column", sm: "column", md: "column" },
+        justifyContent: { xs: "center", sm: "center", md: "center" },
+        p: { xs: 2, sm: 2, md: 2 },
+        height: { xs: "auto", sm: "auto", md: "70vh" }
+      }}>
+        <Box sx={{
           display: "flex",
-          flex: { xs: 1, sm: 2, md: 2 },
-          width: { xs: "80%", sm: "80%", md: "80%" },
-          flexDirection: { xs: "column", sm: "row", md: "column" },
+          flex: { xs: 1, sm: 1, md: 1 },
+          flexDirection: { xs: "column", sm: "column", md: "column" },
           justifyContent: { xs: "center", sm: "center", md: "center" },
-          alignItems: { xs: "center", sm: "center", md: "center" },
-          mt: "1rem",
-          gap: { xs: 6, sm: 2, md: 0 },
-          border: "1px solid red"
+          ml: { xs: 0, sm: 0, md: "10%" },
+          mr: { xs: 0, sm: 0, md: "40%" },
+          mx: "auto"
         }}>
         {/* TÍTULO */}
         <Box sx={{
           display: "flex",
           flex: 1,
           justifyContent: { xs: "center", sm: "center", md: "center" },
-          alignItems: { xs: "center", sm: "center", md: "center" }
+            alignItems: { xs: "center", sm: "center", md: "center" }
         }}>
           <Typography
             sx={{
@@ -53,10 +59,9 @@ export default function Hero() {
             <Box component="span"
               sx={{
                 display: "inline",
-                color: "#4995B1",
                 width: "80%",
                 fontFamily: montserrat.style.fontFamily,
-                fontWeight: 700,
+                fontWeight: 100,
               }}>
             Eleve a experiência do seu ambiente{" "}
             </Box>
@@ -82,7 +87,7 @@ export default function Hero() {
 
             <Box component="span"
               sx={{
-                fontFamily: poppins.style.fontFamily,
+                fontFamily: montserrat.style.fontFamily,
                 fontWeight: 800,
                 display: "inline",
               }}>
@@ -96,7 +101,7 @@ export default function Hero() {
         <Box sx={{
           display: "flex",
           flex: 1,
-          alignItems: "center"
+            alignItems: "center"
         }}>
           <Typography
             sx={{
@@ -116,13 +121,12 @@ export default function Hero() {
           </Typography>
         </Box>
 
-          {/* BOTÃO */}
+          {/* BOTÃO AGENDAR */}
         <Box sx={{
           display: "flex",
           flex: 1,
-          justifyContent: "center",
-          alignItems: "center",
-          width: "100%"
+            justifyContent: { xs: "center", sm: "center", md: "left" },
+            alignItems: "center"
         }}>
           <Button
             variant="contained"
@@ -132,7 +136,8 @@ export default function Hero() {
               color: "#fff",
               px: 4,
               py: 1.5,
-              width: { xs: "70%", sm: "80%" },
+              height: { xs: "auto", sm: "45px", md: "45px" },
+              width: { xs: "50%", sm: "50%", md: "60%" },
               boxShadow: "none",
               "&:hover": {
                 background: "linear-gradient(to right, #05b6c6ff, #0E2A38)",
@@ -144,13 +149,14 @@ export default function Hero() {
               sx={{
                 fontSize: "1rem",
                 fontFamily: montserrat.style.fontFamily,
-                fontWeight: { xs: 300, md: 400 },
+                  fontWeight: { xs: 300, sm: 500, md: 400 },
                 borderRadius: "8px",
                 textTransform: "none"
               }}>
               Agendar consultoria olfativa
             </Typography>
           </Button>
+        </Box>
         </Box>
       </Box>
 
@@ -161,8 +167,8 @@ export default function Hero() {
           flex: 1,
           flexDirection: "column",
           height: "auto",
-          width: { xs: "100%", sm: "90%", md: "90%" },
-          justifyContent: { xs: "center", sm: "flex-end", md: "flex-end" },
+          width: { xs: "80%", sm: "80%", md: "80%" },
+          justifyContent: { xs: "center", sm: "center", md: "flex-end" },
           alignItems: { xs: "center", sm: "center", md: "center" }
         }}
       >
@@ -174,6 +180,7 @@ export default function Hero() {
             transition: "transform 0.2s ease",
             "&:hover": { transform: "scale(1.05)" },
             cursor: "pointer",
+            mb: 2
           }}
         >
           <IconButton
