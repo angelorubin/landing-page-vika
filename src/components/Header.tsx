@@ -30,7 +30,7 @@ const navItems = [
 
 export default function Header() {
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+  const isMobile = useMediaQuery(theme.breakpoints.down("lg"));
   const [open, setOpen] = React.useState(false);
 
   const toggleDrawer = () => setOpen(!open);

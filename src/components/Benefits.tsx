@@ -10,7 +10,7 @@ import {
   Support,
 } from '@mui/icons-material'
 import { blue } from '@mui/material/colors'
-import { poppins } from '@/fonts/fonts'
+import { cormorant, poppins, montserrat } from '@/fonts/fonts'
 
 const benefits = [
   {
@@ -52,7 +52,7 @@ const Benefits = () => {
       flexDirection: { xs: "column", md: "row" },
       justifyContent: "center",
       alignItems: "center",
-      border: "1px solid red",
+      border: "1px dashed red",
       m: 1,
       p: 1,
       gap: 1
@@ -90,6 +90,7 @@ const Benefits = () => {
               gap: 1
             }}>2</Box>
           </Box>
+
           <Box sx={{
             dipslay: "flex",
             flex: 1,
@@ -116,12 +117,11 @@ const Benefits = () => {
         }}>
           <Typography sx={{
             p: 1,
-            fontWeight: 300,
-            fontSize: { xs: "1.25rem", md: "1.4rem" },
+            fontWeight: 800,
+            fontSize: { xs: "1rem", sm: "1.4rem", md: "2rem" },
             fontFamily: poppins.style.fontFamily
           }}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua.
+            Transforme seu ambiente em uma experiência que encanta, acolhe e permanece na memória.
           </Typography>
         </Box>
 
@@ -130,15 +130,14 @@ const Benefits = () => {
           alignItems: "center",
           justifyContent: "center",
           minHeight: "100px",
-          border: "1px solid pink"
+          border: "3px dashed purple"
         }}>
           <Typography sx={{
-            fontWeight: 100,
-            fontSize: { xs: "1.25rem", md: "1rem" },
-            fontFamily: "Poppins"
+            fontWeight: 300,
+            fontSize: { xs: "1rem", sm: "1rem", md: "1rem" },
+            fontFamily: montserrat.style.fontFamily
           }}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua.
+            Sua marca pode ser reconhecida pela sensação que entrega.
           </Typography>
         </Box>
 
