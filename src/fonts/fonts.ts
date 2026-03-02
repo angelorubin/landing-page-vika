@@ -1,6 +1,12 @@
-import { Poppins, Cormorant_Garamond, Montserrat } from "next/font/google";
+import { Poppins, Cormorant_Garamond, Montserrat, Inter } from "next/font/google";
 
 export const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["100", "300", "400", "500", "600", "800", "900"],
+  display: "swap",
+});
+
+export const inter = Poppins({
   subsets: ["latin"],
   weight: ["100", "300", "400", "500", "600", "800", "900"],
   display: "swap",

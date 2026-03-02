@@ -13,7 +13,8 @@ import {
   ListItem,
   ListItemButton,
   ListItemText,
-  useMediaQuery
+  useMediaQuery,
+  Typography
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useTheme } from "@mui/material/styles";
@@ -47,13 +48,21 @@ export default function Header() {
         <Container maxWidth="xl">
           <Toolbar sx={{ justifyContent: "space-between", py: 1 }}>
 
+            <Box sx={{}}>
             {/* LOGO */}
             <Box
               component="img"
-              src="/assets/images/logo.png" // substitua pela sua logo
+                src="/assets/images/logo.png"
               alt="Logo"
-              sx={{ height: "5rem" }}
-            />
+                sx={{ height: "2rem" }}
+              />
+              <Box>
+                <Typography sx={{
+                  color: "#1a1a1a",
+                  fontWeight: 500, fontFamily: "Poppins, sans-serif"
+                }}>Parfum</Typography>
+              </Box>
+            </Box>
 
             {/* MENU DESKTOP */}
             {!isMobile && (

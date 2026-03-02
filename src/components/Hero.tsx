@@ -2,7 +2,7 @@
 
 import { Box, Button, Typography, IconButton } from "@mui/material";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
-import { poppins, montserrat } from "@/fonts/fonts";
+import { montserrat, inter } from "@/fonts/fonts";
 
 export default function Hero() {
   return (
@@ -11,15 +11,19 @@ export default function Hero() {
         display: "flex",
         flexDirection: { xs: "column", sm: "column", md: "row" },
         alignItems: { xs: "center", sm: "center", md: "stretch" },
-        minHeight: "80vh",
+        minHeight: "670px",
         mt: "1.6rem",
         ml: 1,
         mr: 1,
         mb: 1,
-        p: "2rem",
-        backgroundColor: "#000",
+        pt: "2rem",
         borderRadius: "2rem",
-        gap: { xs: 4, md: 0 }
+        backgroundImage: `linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 50%), url('assets/images/hero-bg.png')`,
+        backgroundSize: "cover", // Garante que a imagem cubra todo o container
+        backgroundPosition: "center", // Centraliza a imagem
+        backgroundRepeat: "no-repeat", // Evita a repetição da imagem
+        backgroundColor: "#fff",
+        border: "3px dashed red"
       }}
     >
       <Box sx={{
@@ -28,7 +32,7 @@ export default function Hero() {
         flexDirection: { xs: "column", sm: "column", md: "column" },
         justifyContent: { xs: "center", sm: "center", md: "center" },
         p: { xs: 2, sm: 2, md: 2 },
-        height: { xs: "auto", sm: "auto", md: "70vh" }
+        height: { xs: "auto", sm: "auto", md: "auto" }
       }}>
         <Box sx={{
           display: "flex",
@@ -61,7 +65,7 @@ export default function Hero() {
                 display: "inline",
                 width: "80%",
                 fontFamily: montserrat.style.fontFamily,
-                fontWeight: 100,
+                fontWeight: 200
               }}>
             Eleve a experiência do seu ambiente{" "}
             </Box>
@@ -166,10 +170,9 @@ export default function Hero() {
           display: "flex",
           flex: 1,
           flexDirection: "column",
-          height: "auto",
-          width: { xs: "80%", sm: "80%", md: "80%" },
-          justifyContent: { xs: "center", sm: "center", md: "flex-end" },
-          alignItems: { xs: "center", sm: "center", md: "center" }
+          height: "100vh",
+          width: { xs: "80%", sm: "100%", md: "100%" },
+          position: "relative",
         }}
       >
         <Box
@@ -180,7 +183,11 @@ export default function Hero() {
             transition: "transform 0.2s ease",
             "&:hover": { transform: "scale(1.05)" },
             cursor: "pointer",
-            mb: 2
+            mb: 2,
+            mr: 2,
+            position: "absolute",
+            bottom: 0,
+            right: 0,
           }}
         >
           <IconButton
@@ -197,9 +204,9 @@ export default function Hero() {
 
           <Typography
             sx={{
-              fontSize: "14px",
-              fontWeight: 500,
-              color: "#fff",
+              fontSize: "20px",
+              fontWeight: 600,
+              color: "#000",
               whiteSpace: "nowrap",
               fontFamily: montserrat.style.fontFamily,
             }}
@@ -211,3 +218,4 @@ export default function Hero() {
     </Box >
   );
 }
+
