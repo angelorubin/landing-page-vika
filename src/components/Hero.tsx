@@ -12,7 +12,6 @@ export default function Hero() {
         flexDirection: { xs: "column", sm: "column", md: "row" },
         alignItems: { xs: "center", sm: "center", md: "stretch" },
         minHeight: "670px",
-        mt: "1.6rem",
         ml: 1,
         mr: 1,
         mb: 1,
@@ -22,8 +21,7 @@ export default function Hero() {
         backgroundSize: "cover", // Garante que a imagem cubra todo o container
         backgroundPosition: "center", // Centraliza a imagem
         backgroundRepeat: "no-repeat", // Evita a repetição da imagem
-        backgroundColor: "#fff",
-        border: "3px dashed red"
+        backgroundColor: "#fff"
       }}
     >
       <Box sx={{

@@ -18,7 +18,7 @@ import {
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useTheme } from "@mui/material/styles";
-import { montserrat } from "@/fonts/fonts";
+import { inter, montserrat } from "@/fonts/fonts";
 
 const navItems = [
   { label: "Sobre", href: "#sobre" },
@@ -39,7 +39,7 @@ export default function Header() {
   return (
     <>
       <AppBar
-        position="fixed"
+        position="sticky"
         elevation={0}
         sx={{
           backgroundColor: "#fff"
@@ -48,19 +48,28 @@ export default function Header() {
         <Container maxWidth="xl">
           <Toolbar sx={{ justifyContent: "space-between", py: 1 }}>
 
-            <Box sx={{}}>
+            <Box sx={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              gap: 1
+            }}>
             {/* LOGO */}
             <Box
               component="img"
                 src="/assets/images/logo.png"
-              alt="Logo"
-                sx={{ height: "2rem" }}
+                alt="Logo"
+                sx={{ height: "53px" }}
               />
               <Box>
                 <Typography sx={{
-                  color: "#1a1a1a",
-                  fontWeight: 500, fontFamily: "Poppins, sans-serif"
-                }}>Parfum</Typography>
+                  color: "#5B2741",
+                  fontWeight: "regular",
+                  fontSize: "18px",
+                  fontFamily: inter.style.fontFamily
+                }}>
+                  PARFUM
+                </Typography>
               </Box>
             </Box>
 
@@ -116,9 +125,6 @@ export default function Header() {
           </Toolbar>
         </Container>
       </AppBar>
-
-      {/* ESPAÇO PARA NÃO FICAR ATRÁS DO APPBAR */}
-      <Toolbar />
 
       {/* DRAWER MOBILE */}
       <Drawer anchor="right" open={open} onClose={toggleDrawer}>
