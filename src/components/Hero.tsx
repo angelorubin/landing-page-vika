@@ -14,22 +14,15 @@ export default function Hero() {
         minHeight: "670px",
         m: "0 1rem 1rem 1rem",
         borderRadius: "2rem",
-        position: "relative", // Mantido para o posicionamento do WhatsApp
-
-        // LOGICA DE IMAGEM:
+        position: "relative",
         backgroundImage: {
-          // No mobile e tablet, usamos apenas o gradiente ou cor sólida
           xs: `linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 100%)`,
           sm: `linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 100%)`,
-          // No desktop, incluímos a imagem após o gradiente
           md: `linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 50%), url('assets/images/hero-bg.png')`
         },
-
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
-
-        // Cor de fundo para garantir que no mobile fique escuro caso o gradiente falhe
         backgroundColor: { xs: "#000", md: "#fff" },
         overflow: "hidden"
       }}
