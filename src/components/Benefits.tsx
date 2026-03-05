@@ -1,8 +1,8 @@
-'use client'
+"use client";
 
 import { Typography, Box, Button } from '@mui/material'
 import { blue } from '@mui/material/colors'
-import { inter, montserrat } from '@/fonts/fonts'
+import { inter, montserrat, poppins } from '@/fonts/fonts'
 
 const Benefits = () => {
   return (
@@ -11,9 +11,10 @@ const Benefits = () => {
       flexDirection: { xs: "column", md: "row" },
       justifyContent: "center",
       alignItems: "center",
-      m: 1,
+      mt: "2rem",
+      mb: "2rem",
       p: 1,
-      gap: 1
+      gap: 3
     }}>
       <Box
         sx={{
@@ -55,14 +56,14 @@ const Benefits = () => {
 
       <Box sx={{
         display: "flex",
-        flex: 1,
+        flex: { xs: 1, sm: 1, md: 1 },
         flexDirection: "column",
-        width: "60%",
+        gap: 2,
+        width: { xs: "100%", sm: "100%", md: "60%" }
       }}>
         <Box sx={{
           display: "flex",
-          alignItems: "center",
-          justifyContent: "flex-start"
+          textAlign: { xs: "center", sm: "center", md: "left" }
         }}>
           <Typography sx={{
             fontWeight: "bold",
@@ -77,11 +78,11 @@ const Benefits = () => {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          minHeight: "100px"
+          textAlign: { xs: "center", sm: "center", md: "left" }
         }}>
           <Typography sx={{
             fontWeight: 300,
-            fontSize: "11px",
+            fontSize: "14px",
             fontFamily: inter.style.fontFamily,
             color: "#121114"
           }}>
@@ -94,9 +95,9 @@ const Benefits = () => {
 
         <Box sx={{
           display: "flex",
-          alignItems: "flex-start",
-          justifyContent: "flex-start",
-          minHeight: "100px"
+          alignItems: "center",
+          justifyContent: { xs: "center", md: "flex-start" },
+          textAlign: { xs: "center", sm: "left", md: "left" }
         }}>
           <Typography sx={{
             p: 1,
@@ -112,7 +113,24 @@ const Benefits = () => {
         <Box sx={{
           display: "flex",
           alignItems: "center",
-          justifyContent: "flex-start"
+          justifyContent: { xs: "center", md: "flex-start" },
+          textAlign: { xs: "center", sm: "center", md: "left" }
+        }}>
+          <Typography sx={{
+            p: 1,
+            fontWeight: 600,
+            fontSize: { xs: "1rem", md: "1rem" },
+            fontFamily: poppins.style.fontFamily,
+            color: "#000"
+          }}>
+            E o aroma é o primeiro capítulo dessa história.
+          </Typography>
+        </Box>
+
+        <Box sx={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: { xs: "center", md: "flex-start" }
         }}>
           <Button
             variant="contained"
