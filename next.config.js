@@ -1,9 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ['localhost'],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "**.vercel.app",
+      },
+    ],
   },
-  transpilePackages: ['@mui/material', '@mui/icons-material'],
-}
+  transpilePackages: ["@mui/material", "@mui/icons-material"],
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
