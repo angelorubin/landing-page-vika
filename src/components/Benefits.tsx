@@ -3,54 +3,77 @@
 import { Typography, Box, Button } from '@mui/material'
 import { blue } from '@mui/material/colors'
 import { inter, montserrat, poppins } from '@/fonts/fonts'
+import Image from 'next/image';
 
 const Benefits = () => {
   return (
-    <Box sx={{
-      display: "flex",
-      flexDirection: { xs: "column", md: "row" },
-      justifyContent: "center",
-      alignItems: "center",
-      mt: "2rem",
-      mb: "2rem",
-      p: 1,
-      gap: 3
-    }}>
+    <Box
+      sx={{
+        display: "flex",
+        flexDirection: { xs: "column", sm: "column", md: "row" },
+        justifyContent: "center",
+        alignItems: "center",
+        py: 4
+      }}
+    >
       <Box
         sx={{
           display: "flex",
           flex: 1,
-          flexDirection: "column",   // Empilha a "linha das 2" e a "3ª imagem"
-          alignItems: "center",      // Centraliza horizontalmente
-          justifyContent: "center",  // Centraliza verticalmente (requer altura no pai)
-          width: "100%"
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+          gap: 0.5,
+          p: 1
         }}
       >
-        {/* Box Intermediária (Terceira Box de apoio) */}
-        <Box
-          sx={{
-            display: "flex",
-            gap: 0.2,
-            flexDirection: "row",
-            justifyContent: "center",
-            alignItems: "flex-end",
-            width: "100%"
-          }}
-        >
-          {/* Imagem 01 */}
-          <Box sx={{ display: "flex", alignItems: "flex-end" }}>
-            <img src="assets/images/bg-benefits-01.png" style={{ borderRadius: "8px", width: '100%', height: 'auto' }} />
+        <Box sx={{
+          display: "flex",
+          flexDirection: "column",
+          width: { xs: "100%", sm: "100%", md: "60%" },
+          gap: 0.5,
+          p: 1
+        }}>
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "row",
+              gap: 0.5,
+              width: "100%",
+            }}
+          >
+            <Box sx={{ position: "relative", flex: 1 }}>
+              <Image
+                src="/assets/images/bg-benefits-01.png"
+                alt="img1"
+                width={600}
+                height={400}
+                priority
+                style={{ width: "100%", height: "auto", borderRadius: "8px" }}
+              />
+            </Box>
+
+            <Box sx={{ position: "relative", flex: 1 }}>
+              <Image
+                src="/assets/images/bg-benefits-02.png"
+                alt="img2"
+                width={600}
+                height={400}
+                priority
+                style={{ width: "100%", height: "auto", borderRadius: "8px" }}
+              />
+            </Box>
           </Box>
 
-          {/* Imagem 02 */}
-          <Box sx={{ display: "flex", alignItems: "flex-end" }}>
-            <img src="assets/images/bg-benefits-02.png" style={{ borderRadius: "8px", width: '100%', height: 'auto' }} />
+          <Box sx={{ width: "100%" }}>
+            <Image
+              src="/assets/images/bg-benefits-03.png"
+              alt="img3"
+              width={1216}
+              height={400}
+              style={{ width: "100%", height: "auto", borderRadius: "8px" }}
+            />
           </Box>
-        </Box>
-
-        {/* Imagem 03 (Fica abaixo por causa do column do pai) */}
-        <Box sx={{ display: "flex", mt: 0.3, alignItems: "flex-start" }}>
-          <img src="assets/images/bg-benefits-03.png" style={{ borderRadius: "8px", marginLeft: '0.8%', width: '98.7%', height: 'auto' }} />
         </Box>
       </Box>
 
@@ -59,7 +82,7 @@ const Benefits = () => {
         flex: { xs: 1, sm: 1, md: 1 },
         flexDirection: "column",
         gap: 2,
-        width: { xs: "100%", sm: "100%", md: "60%" }
+        width: { xs: "100%", sm: "60%", md: "60%" }
       }}>
         <Box sx={{
           display: "flex",
@@ -147,7 +170,7 @@ const Benefits = () => {
           </Button>
         </Box>
       </Box>
-    </Box>
+    </Box >
   )
 }
 
