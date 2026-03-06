@@ -41,9 +41,9 @@ export default function Hero() {
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
-            ml: { xs: 0, md: "10%" },
-            mr: { xs: 0, md: "40%" },
-            mx: { xs: "auto", md: "0" }
+            gap: 2,
+            py: { xs: 2, sm: 4, md: 2 },
+            width: { xs: "100%", sm: "70%", md: "70%" }
           }}
         >
           {/* TÍTULO */}
@@ -105,15 +105,14 @@ export default function Hero() {
           {/* SUBTEXTO */}
           <Box sx={{
             display: "flex",
-            alignItems: "center",
-            mb: 4
+            alignItems: "center"
           }}>
             <Typography
               sx={{
-                fontSize: "1rem",
+                fontSize: "0.9rem",
                 color: "#fff",
                 fontFamily: montserrat.style.fontFamily,
-                fontWeight: 200,
+                fontWeight: 400,
                 maxWidth: { xs: "100%", md: "90%" },
                 textAlign: { xs: "center", md: "left" }
               }}
@@ -127,8 +126,7 @@ export default function Hero() {
           {/* BOTÃO AGENDAR */}
           <Box sx={{
             display: "flex",
-            justifyContent: { xs: "center", md: "flex-start" },
-            alignItems: "center"
+            justifyContent: { xs: "center", md: "flex-start" }
           }}>
             <Button
               variant="contained"
