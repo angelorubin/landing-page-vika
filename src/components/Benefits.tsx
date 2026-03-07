@@ -13,7 +13,8 @@ const Benefits = () => {
         flexDirection: { xs: "column", sm: "column", md: "row" },
         justifyContent: "center",
         alignItems: "center",
-        py: 4
+        py: 4,
+        gap: 4
       }}
     >
       <Box
@@ -22,13 +23,15 @@ const Benefits = () => {
           flex: 1,
           flexDirection: "column",
           justifyContent: "center",
-          alignItems: "center",
+          alignItems: { xs: "center", sm: "center", md: "center" },
           gap: 0.5,
-          p: 1
+          p: 1,
+          width: { xs: "100%", sm: "100%", md: "40%" }
         }}
       >
         <Box sx={{
           display: "flex",
+          flex: 1,
           flexDirection: "column",
           width: { xs: "100%", sm: "100%", md: "60%" },
           gap: 0.5,
@@ -81,10 +84,18 @@ const Benefits = () => {
         display: "flex",
         flex: { xs: 1, sm: 1, md: 1 },
         flexDirection: "column",
+        alignItems: { xs: "center", sm: "center", md: "flex-start" },
         gap: 2,
-        width: { xs: "100%", sm: "60%", md: "60%" }
+        width: { xs: "100%", sm: "100%", md: "100%" }
       }}>
         <Box sx={{
+          display: "flex",
+          flex: { xs: 1, sm: 1, md: 1 },
+          flexDirection: "column",
+          gap: 2,
+          width: { xs: "100%", sm: "100%", md: "50%" }
+        }}>
+          <Box sx={{
           display: "flex",
           textAlign: { xs: "center", sm: "center", md: "left" }
         }}>
@@ -95,9 +106,9 @@ const Benefits = () => {
           }}>
             Transforme seu ambiente em uma experiência que encanta, acolhe e permanece na memória.
           </Typography>
-        </Box>
+          </Box>
 
-        <Box sx={{
+          <Box sx={{
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
@@ -114,9 +125,9 @@ const Benefits = () => {
             Ambientes aromatizados com propósito transmitem cuidado, exclusividade e
             elevam instantaneamente a percepção de valor.
           </Typography>
-        </Box>
+          </Box>
 
-        <Box sx={{
+          <Box sx={{
           display: "flex",
           alignItems: "center",
           justifyContent: { xs: "center", md: "flex-start" },
@@ -131,9 +142,9 @@ const Benefits = () => {
           }}>
             Sua marca pode ser reconhecida pela sensação que entrega.
           </Typography>
-        </Box>
+          </Box>
 
-        <Box sx={{
+          <Box sx={{
           display: "flex",
           alignItems: "center",
           justifyContent: { xs: "center", md: "flex-start" },
@@ -148,9 +159,9 @@ const Benefits = () => {
           }}>
             E o aroma é o primeiro capítulo dessa história.
           </Typography>
-        </Box>
+          </Box>
 
-        <Box sx={{
+          <Box sx={{
           display: "flex",
           alignItems: "center",
           justifyContent: { xs: "center", md: "flex-start" }
@@ -168,6 +179,7 @@ const Benefits = () => {
           >
             Quero transformar o ambiente da minha marca
           </Button>
+          </Box>
         </Box>
       </Box>
     </Box >
